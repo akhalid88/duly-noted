@@ -40,6 +40,11 @@ app.post("/api/notes", function (req, res) {
 	//Save note
 	var newNote = req.body;
 	notes.push(newNote);
+
+	for(var i = 0; i < notes.length; i++) {
+		notes[i].id = i + 1;
+	}
+
 	res.send(notes);
 })
 
