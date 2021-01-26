@@ -52,7 +52,6 @@ app.post("/api/notes", function (req, res) {
 app.delete("/api/notes/:id", function (req, res) {
 	//Delete specific note
 	var chosenNote = req.params.id;
-	console.log(chosenNote);
 	notes.splice(chosenNote - 1, 1);
 
 	for(var i = 0; i < notes.length; i++) {
@@ -60,7 +59,6 @@ app.delete("/api/notes/:id", function (req, res) {
 	}
 	res.send();
 })
-
 
 //Start server listening
 app.listen(PORT, function () {
