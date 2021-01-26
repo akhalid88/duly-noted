@@ -45,12 +45,20 @@ app.post("/api/notes", function (req, res) {
 		notes[i].id = i + 1;
 	}
 
-	res.send(notes);
+	res.send();
 })
 
 //DELETE api/notes/:id deletes specific note
 app.delete("/api/notes/:id", function (req, res) {
 	//Delete specific note
+	var chosenNote = req.params.id;
+	console.log(chosenNote);
+	notes.splice(chosenNote - 1, 1);
+
+	for(var i = 0; i < notes.length; i++) {
+		notes[i].id = i + 1;
+	}
+	res.send();
 })
 
 
