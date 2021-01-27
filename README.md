@@ -16,7 +16,7 @@
 
 -----------------------
 ## Description
-This is a note taking application built in Javascript, using Express JS.
+This is a note taking application built in Javascript, using Express JS. You can write, save, and delete notes all in your browser!
 
 -----------------------
 ## Deployed link
