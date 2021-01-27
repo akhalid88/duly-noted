@@ -2,7 +2,6 @@
 var express = require("express");
 var path = require("path");
 var fs = require("fs");
-// var notes = require("./db/db.json");
 
 // Set up variables for express
 var app = express();
@@ -13,10 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 var notes = JSON.parse(fs.readFileSync("./db/db.json"));
-// var notesArr = JSON.parse(notes);
-
 
 // ROUTES
 // GET notes.html
@@ -44,7 +40,6 @@ app.post("/api/notes", function (req, res) {
 	for(var i = 0; i < notes.length; i++) {
 		notes[i].id = i + 1;
 	}
-
 	res.send();
 })
 
